@@ -59,7 +59,20 @@ export default function Navbar() {
           <Link href={langHref} className="btn btn-outline px-3 py-2 text-sm">
             {langLabel}
           </Link>
-          <Link href={`${base}/schedule`} className="btn btn-primary">
+
+          {/* Mobile: Contact button */}
+          <Link
+            href={`${base}/contact`}
+            className="btn btn-primary sm:hidden"
+          >
+            {isSpanish ? "Contacto" : "Contact"}
+          </Link>
+
+          {/* Tablet/desktop: Book Class button */}
+          <Link
+            href={`${base}/schedule`}
+            className="btn btn-primary hidden sm:inline-flex"
+          >
             {isSpanish ? "Reservar Clase" : "Book Class"}
           </Link>
         </div>
