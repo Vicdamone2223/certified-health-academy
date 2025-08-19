@@ -13,8 +13,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[var(--cream)]/70 backdrop-blur">
-      <nav className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+      <nav className="container flex h-16 items-center gap-3">
+        {/* Brand (truncate on mobile so it never hits the buttons) */}
+        <Link href="/" className="flex items-center gap-3 min-w-0">
           <Image
             src="/logo.png"
             alt="Certified Health Academy"
@@ -22,15 +23,13 @@ export default function Navbar() {
             height={40}
             priority
           />
-          <span className="text-sm sm:text-base md:text-lg font-semibold tracking-tight leading-tight whitespace-nowrap">
-  Certified Health Academy
-</span>
-
-
+          <span className="truncate max-w-[56vw] sm:max-w-none text-sm sm:text-base md:text-lg font-semibold tracking-tight leading-tight">
+            Certified Health Academy
+          </span>
         </Link>
 
-        {/* Middle nav links */}
-        <div className="hidden gap-6 sm:flex">
+        {/* Middle nav (hidden on mobile) */}
+        <div className="hidden gap-6 sm:flex ml-auto">
           <Link href={`${base}/courses`} className="link-underline">
             {isSpanish ? "Cursos" : "Courses"}
           </Link>
@@ -45,8 +44,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Right-side buttons */}
-        <div className="flex items-center gap-3">
+        {/* Right-side buttons (always on the far right) */}
+        <div className="flex items-center gap-2 sm:gap-3 ml-auto sm:ml-6">
           <Link href={langHref} className="btn btn-outline px-3 py-2 text-sm">
             {langLabel}
           </Link>
