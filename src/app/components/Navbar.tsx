@@ -24,12 +24,12 @@ export default function Navbar() {
             priority
           />
           <span className="font-semibold tracking-tight leading-tight">
-            {/* Mobile: stacked & centered */}
-            <span className="block sm:hidden text-sm leading-tight text-center">
+            {/* Phones: stacked & centered */}
+            <span className="block md:hidden text-sm leading-tight text-center">
               Certified Health <br /> Academy
             </span>
-            {/* Tablet/desktop: single line */}
-            <span className="hidden sm:inline text-base md:text-lg whitespace-nowrap">
+            {/* Tablet/Desktop: single line */}
+            <span className="hidden md:inline text-base lg:text-lg whitespace-nowrap">
               Certified Health Academy
             </span>
           </span>
@@ -38,8 +38,8 @@ export default function Navbar() {
         {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Middle nav (desktop only) */}
-        <div className="hidden gap-6 sm:flex">
+        {/* Middle nav (tablet/desktop only) */}
+        <div className="hidden gap-6 md:flex">
           <Link href={`${base}/courses`} className="link-underline">
             {isSpanish ? "Cursos" : "Courses"}
           </Link>
@@ -55,23 +55,20 @@ export default function Navbar() {
         </div>
 
         {/* Right-side buttons */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <Link href={langHref} className="btn btn-outline px-3 py-2 text-sm">
             {langLabel}
           </Link>
 
-          {/* Mobile: Contact button only */}
-          <Link
-            href={`${base}/contact`}
-            className="btn btn-primary sm:hidden"
-          >
+          {/* Phones: Contact only */}
+          <Link href={`${base}/contact`} className="btn btn-primary md:hidden">
             {isSpanish ? "Contacto" : "Contact"}
           </Link>
 
-          {/* Desktop: Book Class button only */}
+          {/* Tablet/Desktop: Book Class only */}
           <Link
             href={`${base}/schedule`}
-            className="btn btn-primary hidden sm:inline-flex"
+            className="btn btn-primary hidden md:inline-flex"
           >
             {isSpanish ? "Reservar Clase" : "Book Class"}
           </Link>
