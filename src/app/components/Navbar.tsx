@@ -35,10 +35,10 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Spacer pushes content to the right */}
+        {/* Spacer */}
         <div className="flex-1" />
 
-        {/* Middle nav (hidden on mobile) */}
+        {/* Middle nav (desktop only) */}
         <div className="hidden gap-6 sm:flex">
           <Link href={`${base}/courses`} className="link-underline">
             {isSpanish ? "Cursos" : "Courses"}
@@ -60,7 +60,7 @@ export default function Navbar() {
             {langLabel}
           </Link>
 
-          {/* Mobile: Contact button */}
+          {/* Mobile: Contact button only */}
           <Link
             href={`${base}/contact`}
             className="btn btn-primary sm:hidden"
@@ -68,7 +68,7 @@ export default function Navbar() {
             {isSpanish ? "Contacto" : "Contact"}
           </Link>
 
-          {/* Tablet/desktop: Book Class button */}
+          {/* Desktop: Book Class button only */}
           <Link
             href={`${base}/schedule`}
             className="btn btn-primary hidden sm:inline-flex"
