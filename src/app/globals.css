@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand tokens */
+:root{
+  --brand:#132C45;       /* deep navy */
+  --cream:#F5F0EA;       /* warm paper bg */
+  --accent:#0F766E;      /* teal cta */
+  --ink:#0E1621;         /* ultra dark text */
+}
+
+html,body{height:100%}
+body{
+  @apply bg-[var(--cream)] text-[var(--brand)] antialiased;
+}
+
+/* nicer container */
+.container{
+  @apply mx-auto max-w-6xl px-4;
+}
+
+/* subtle card */
+.card{
+  @apply rounded-2xl border border-[color-mix(in_srgb,var(--brand)_10%,transparent)] bg-white/70 shadow-sm backdrop-blur transition hover:shadow-md;
+}
+
+/* buttons */
+.btn{
+  @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium transition;
+}
+.btn-primary{
+  @apply bg-[var(--brand)] text-white hover:bg-[color-mix(in_srgb,var(--brand)_90%,black_10%)];
+}
+.btn-outline{
+  @apply border border-[var(--brand)] text-[var(--brand)] hover:bg-[var(--brand)] hover:text-white;
+}
+
+/* underlines for nav */
+.link-underline{
+  background: linear-gradient(currentColor,currentColor) no-repeat left bottom/0 2px;
+  transition: background-size .2s ease;
+}
+.link-underline:hover{background-size:100% 2px}
