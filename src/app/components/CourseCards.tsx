@@ -35,7 +35,7 @@ const courses: Course[] = [
     slug: "medication-administration",
     price: "$70",
     accred: "Home Health Plus accredited",
-    renew: "Every year",
+    renew: "Every 3 Years",
     subtitle: "Community & Home Care",
     img: "/medication.jpg",
     bullets: [

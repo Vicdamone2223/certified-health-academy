@@ -17,7 +17,7 @@ export default function MedicationAdministrationPage() {
       <header className="mt-2">
         <h1 className="text-3xl font-extrabold">Medication Administration</h1>
         <p className="mt-2 text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
-          <strong>$70</strong> · Home Health Plus accredited · Renewal: <strong>every year</strong>
+          <strong>$70</strong> · Home Health Plus accredited · Renewal: <strong>every 3 years</strong>
         </p>
 
         {/* Banner image */}

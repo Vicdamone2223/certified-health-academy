@@ -22,9 +22,11 @@ export default function Navbar() {
             height={40}
             priority
           />
-          <span className="text-lg font-semibold tracking-tight">
-            Certified Health Academy
-          </span>
+          <span className="text-sm sm:text-base md:text-lg font-semibold tracking-tight leading-tight whitespace-nowrap">
+  Certified Health Academy
+</span>
+
+
         </Link>
 
         {/* Middle nav links */}
