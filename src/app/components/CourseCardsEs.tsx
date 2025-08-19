@@ -42,7 +42,6 @@ const courses: Course[] = [
       "Registro MAR e informe de incidentes",
       "Vías y formas; dosificación precisa",
       "Almacenamiento, seguridad y desecho",
-      "Curso impartido en inglés y español",
     ],
   },
   {
