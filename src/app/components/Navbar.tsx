@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[var(--cream)]/70 backdrop-blur">
       <nav className="container flex h-16 items-center gap-3">
-        {/* Brand (truncate on mobile so it never hits the buttons) */}
+        {/* Brand */}
         <Link href="/" className="flex items-center gap-3 min-w-0">
           <Image
             src="/logo.png"
@@ -23,13 +23,23 @@ export default function Navbar() {
             height={40}
             priority
           />
-          <span className="truncate max-w-[56vw] sm:max-w-none text-sm sm:text-base md:text-lg font-semibold tracking-tight leading-tight">
-            Certified Health Academy
+          <span className="font-semibold tracking-tight leading-tight">
+            {/* Mobile: stacked & centered */}
+            <span className="block sm:hidden text-sm leading-tight text-center">
+              Certified Health <br /> Academy
+            </span>
+            {/* Tablet/desktop: single line */}
+            <span className="hidden sm:inline text-base md:text-lg whitespace-nowrap">
+              Certified Health Academy
+            </span>
           </span>
         </Link>
 
+        {/* Spacer pushes content to the right */}
+        <div className="flex-1" />
+
         {/* Middle nav (hidden on mobile) */}
-        <div className="hidden gap-6 sm:flex ml-auto">
+        <div className="hidden gap-6 sm:flex">
           <Link href={`${base}/courses`} className="link-underline">
             {isSpanish ? "Cursos" : "Courses"}
           </Link>
@@ -44,8 +54,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Right-side buttons (always on the far right) */}
-        <div className="flex items-center gap-2 sm:gap-3 ml-auto sm:ml-6">
+        {/* Right-side buttons */}
+        <div className="flex items-center gap-2 sm:gap-3">
           <Link href={langHref} className="btn btn-outline px-3 py-2 text-sm">
             {langLabel}
           </Link>
