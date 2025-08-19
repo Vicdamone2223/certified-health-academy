@@ -53,7 +53,7 @@ export default function HomeEs() {
       </section>
 
       {/* Detailed course cards */}
-      <CourseCards />
+      <CourseCardsEs />
     </>
   );
 }
