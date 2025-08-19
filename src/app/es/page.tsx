@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import CourseCards from "../components/CourseCards";
+import CourseCardsEs from "../components/CourseCardsEs";
 
 export default function HomeEs() {
   return (
