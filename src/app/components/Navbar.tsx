@@ -61,14 +61,17 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile: Contact only */}
-          <Link href={`${base}/contact`} className="btn btn-primary sm:hidden">
+          <Link
+            href={`${base}/contact`}
+            className="btn btn-primary sm:!hidden"
+          >
             {isSpanish ? "Contacto" : "Contact"}
           </Link>
 
           {/* Desktop: Book Class only */}
           <Link
             href={`${base}/schedule`}
-            className="btn btn-primary hidden sm:inline-flex"
+            className="btn btn-primary !hidden sm:!inline-flex"
           >
             {isSpanish ? "Reservar Clase" : "Book Class"}
           </Link>
