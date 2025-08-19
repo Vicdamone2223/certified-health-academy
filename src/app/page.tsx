@@ -29,7 +29,7 @@ export default function Home() {
 
               <p className="mt-3 text-base sm:text-lg text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
                 Accredited CPR &amp; First Aid, Medication Administration, and Food Handler training
-                across DC &amp; Northern VA. Pay now or reserve a spot.
+                across DC &amp; Northern VA. Reserve a spot with us today!
               </p>
 
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
