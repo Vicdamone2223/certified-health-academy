@@ -2,12 +2,59 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "CPR & First Aid | Elite Training Academy",
+  title:
+    "CPR & First Aid Certification — Virginia, Maryland & DC | Certified Health Academy",
   description:
-    "HSI-accredited CPR & First Aid training. $65. Renew every 2 years. Hands-on skills: CPR, AED, choking relief, bleeding control, and more.",
+    "HSI-accredited CPR & First Aid certification for $65. Hands-on training in CPR, AED use, choking relief, and bleeding control. Classes available in English & Spanish. Renew every 2 years.",
+  alternates: {
+    canonical: "https://certifiedhealthacademy.com/courses/cpr-first-aid",
+  },
 };
 
 export default function CPRFirstAidPage() {
+  // ---- JSON-LD objects (you can tweak values anytime) ----
+  const courseJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "CPR & First Aid Certification",
+    description:
+      "HSI-accredited CPR & First Aid course with hands-on training in CPR, AED use, choking relief, bleeding control, and emergency response. Certificate valid for 2 years.",
+    inLanguage: ["en", "es"],
+    courseMode: "InPerson",
+    educationalCredentialAwarded: "HSI CPR & First Aid Certificate (2 years)",
+    provider: {
+      "@type": "Organization",
+      name: "Certified Health Academy",
+      url: "https://certifiedhealthacademy.com",
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://certifiedhealthacademy.com/courses/cpr-first-aid",
+      price: "65",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+  };
+
+  const breadcrumbsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Courses",
+        item: "https://certifiedhealthacademy.com/courses",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "CPR & First Aid",
+        item: "https://certifiedhealthacademy.com/courses/cpr-first-aid",
+      },
+    ],
+  };
+
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
       <Link href="/courses" className="text-sm text-[var(--accent)] hover:underline">
@@ -23,7 +70,7 @@ export default function CPRFirstAidPage() {
         {/* Banner image */}
         <div className="relative mt-4 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--brand)_10%,transparent)]">
           <Image
-            src="/cpr2.jpg"     // change if you use a different file
+            src="/cpr2.jpg"
             alt="Hands-on CPR & First Aid practice"
             fill
             className="object-cover"
@@ -36,9 +83,9 @@ export default function CPRFirstAidPage() {
       <section className="mt-6">
         <h2 className="text-xl font-semibold">Overview</h2>
         <p className="mt-2">
-          Practical, hands-on training for real emergencies. You’ll practice
-          chest compressions, rescue breaths, AED use, and the essentials of first aid
-          so you’re confident when it counts.
+          Practical, hands-on training for real emergencies. You’ll practice chest
+          compressions, rescue breaths, AED use, and the essentials of first aid so you’re
+          confident when it counts.
         </p>
       </section>
 
@@ -67,7 +114,9 @@ export default function CPRFirstAidPage() {
       <section className="mt-6 grid gap-4 sm:grid-cols-2">
         <div className="rounded-2xl border bg-white p-5">
           <h3 className="font-semibold">Certification</h3>
-          <p className="mt-2 text-sm">Issued by HSI at course completion. Valid 2 years.</p>
+          <p className="mt-2 text-sm">
+            Issued by HSI at course completion. Valid 2 years.
+          </p>
         </div>
         <div className="rounded-2xl border bg-white p-5">
           <h3 className="font-semibold">Includes</h3>
@@ -89,9 +138,24 @@ export default function CPRFirstAidPage() {
       </section>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Link href="/schedule" className="btn btn-primary">Book this class</Link>
-        <Link href="/courses" className="btn btn-outline">Back to Courses</Link>
+        <Link href="/schedule" className="btn btn-primary">
+          Book this class
+        </Link>
+        <Link href="/courses" className="btn btn-outline">
+          Back to Courses
+        </Link>
       </div>
+
+      {/* ---------- JSON-LD: Course + Breadcrumbs ---------- */}
+      <script
+        type="application/ld+json"
+        // Note: JSON.stringify ensures valid JSON in the script tag
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
+      />
     </main>
   );
 }

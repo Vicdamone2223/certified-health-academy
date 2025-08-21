@@ -2,12 +2,61 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Food Handler (Manager) | Elite Training Academy",
+  title:
+    "Food Handler (Manager) Certification — Virginia, Maryland & DC | Certified Health Academy",
   description:
-    "ServSafe-accredited Food Handler (Manager). $140. Renew every 5 years. HACCP, TCS controls, allergens, sanitation, receiving & storage.",
+    "ServSafe-accredited Food Handler Manager training. Learn HACCP, allergen management, safety, sanitation, and compliance for restaurants and food service.",
+  alternates: {
+    canonical: "https://certifiedhealthacademy.com/courses/food-handler-manager",
+  },
 };
 
 export default function FoodHandlerManagerPage() {
+  // ---- JSON-LD objects ----
+  const courseJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: "Food Handler (Manager) Certification",
+    description:
+      "ServSafe-aligned manager training covering HACCP, allergen management, TCS control, sanitation, and compliance for restaurants and food service. Certificate valid for 5 years.",
+    inLanguage: ["en", "es"],
+    courseMode: "InPerson",
+    educationalCredentialAwarded:
+      "Food Handler (Manager) Certificate (5 years)",
+    provider: {
+      "@type": "Organization",
+      name: "Certified Health Academy",
+      url: "https://certifiedhealthacademy.com",
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://certifiedhealthacademy.com/courses/food-handler-manager",
+      price: "140",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+  };
+
+  const breadcrumbsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Courses",
+        item: "https://certifiedhealthacademy.com/courses",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Food Handler (Manager)",
+        item:
+          "https://certifiedhealthacademy.com/courses/food-handler-manager",
+      },
+    ],
+  };
+
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
       <Link href="/courses" className="text-sm text-[var(--accent)] hover:underline">
@@ -89,9 +138,23 @@ export default function FoodHandlerManagerPage() {
       </section>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Link href="/schedule" className="btn btn-primary">Book this class</Link>
-        <Link href="/courses" className="btn btn-outline">Back to Courses</Link>
+        <Link href="/schedule" className="btn btn-primary">
+          Book this class
+        </Link>
+        <Link href="/courses" className="btn btn-outline">
+          Back to Courses
+        </Link>
       </div>
+
+      {/* ---------- JSON-LD: Course + Breadcrumbs ---------- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
+      />
     </main>
   );
 }
