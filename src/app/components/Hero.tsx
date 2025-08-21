@@ -14,7 +14,7 @@ export default function Hero() {
           <p className="mt-4 text-lg text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
             Get certified the simple way with accredited CPR &amp; First Aid,
             Medication Administration, and Food Handler (Manager) courses across
-            DC &amp; Northern VA. Pay now or reserve a spot.
+            DC &amp; Virginia & Maryland. Pay now or reserve a spot.
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -25,7 +25,7 @@ export default function Hero() {
           <ul className="mt-6 space-y-2 text-sm text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
             <li>• Certificates provided — HSI · Home Health Plus · ServSafe</li>
             <li>• Flexible sessions — pay now or reserve a seat</li>
-            <li>• DC &amp; Northern Virginia</li>
+            <li>• DC &amp; Virginia & Maryland</li>
           </ul>
         </div>
 
