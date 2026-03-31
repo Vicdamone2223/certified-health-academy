@@ -13,7 +13,7 @@ export default function CPRFirstAidEs() {
             preparada para emergencias.
           </p>
           <ul className="mt-6 list-disc pl-6 space-y-2">
-            <li>Precio: $65</li>
+            <li>Precio: $80</li>
             <li>Certificación: HSI</li>
             <li>Renovación: cada 2 años</li>
             <li>Técnicas de RCP para adultos, niños y bebés</li>

@@ -12,7 +12,7 @@ export default function MedicationAdministrationEs() {
             cuidadores responsables de administrar medicamentos de manera segura.
           </p>
           <ul className="mt-6 list-disc pl-6 space-y-2">
-            <li>Precio: $70</li>
+            <li>Precio: $110</li>
             <li>Certificación: Home Health Plus</li>
             <li>Renovación: Cada 3 años</li>
             <li>Prácticas seguras de almacenamiento y administración</li>
