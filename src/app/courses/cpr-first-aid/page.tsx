@@ -64,7 +64,7 @@ export default function CPRFirstAidPage() {
       <header className="mt-2">
         <h1 className="text-3xl font-extrabold">CPR &amp; First Aid</h1>
         <p className="mt-2 text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
-          <strong>$65</strong> · HSI accredited · Renewal: every <strong>2 years</strong>
+          <strong>$80</strong> · HSI accredited · Renewal: every <strong>2 years</strong>
         </p>
 
         {/* Banner image */}
