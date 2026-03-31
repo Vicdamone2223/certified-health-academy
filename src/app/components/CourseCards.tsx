@@ -16,7 +16,7 @@ const courses: Course[] = [
   {
     name: "CPR & First Aid",
     slug: "cpr-first-aid",
-    price: "$65",
+    price: "$80",
     accred: "HSI accredited",
     renew: "Every 2 years",
     subtitle: "Adult, Child & Infant",
@@ -33,7 +33,7 @@ const courses: Course[] = [
   {
     name: "Medication Administration",
     slug: "medication-administration",
-    price: "$70",
+    price: "$110",
     accred: "Home Health Plus accredited",
     renew: "Every 3 Years",
     subtitle: "Community & Home Care",

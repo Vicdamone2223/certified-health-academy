@@ -16,7 +16,7 @@ const courses: Course[] = [
   {
     name: "RCP y Primeros Auxilios",
     slug: "cpr-first-aid",
-    price: "$65",
+    price: "$80",
     accred: "HSI acreditado",
     renew: "Cada 2 años",
     subtitle: "Adultos, niños y lactantes",
@@ -32,7 +32,7 @@ const courses: Course[] = [
   {
     name: "Administración de Medicamentos",
     slug: "medication-administration",
-    price: "$70",
+    price: "$110",
     accred: "Acreditado por Home Health Plus",
     renew: "Cada 3 años",
     subtitle: "Atención comunitaria y domiciliaria",
