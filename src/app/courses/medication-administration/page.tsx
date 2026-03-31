@@ -31,7 +31,7 @@ export default function MedicationAdministrationPage() {
     offers: {
       "@type": "Offer",
       url: "https://certifiedhealthacademy.com/courses/medication-administration",
-      price: "70",
+      price: "110",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
     },

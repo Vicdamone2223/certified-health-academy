@@ -30,7 +30,7 @@ export default function CPRFirstAidPage() {
     offers: {
       "@type": "Offer",
       url: "https://certifiedhealthacademy.com/courses/cpr-first-aid",
-      price: "65",
+      price: "80",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
     },
