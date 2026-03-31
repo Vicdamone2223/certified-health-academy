@@ -3,7 +3,7 @@ export const metadata = { title: "Courses | Elite Training Academy" };
 const courses = [
   {
     name: "CPR & First Aid",
-    price: "$65",
+    price: "$80",
     renew: "Every 2 years",
     accred: "HSI accredited",
     blurb: "CPR, AED, choking relief, bleeding control, real-world first aid.",
@@ -11,7 +11,7 @@ const courses = [
   },
   {
     name: "Medication Administration",
-    price: "$70",
+    price: "$110",
     renew: "Every year",
     accred: "Home Health Plus accredited",
     blurb: "Six Rights, MAR, routes & forms, storage, error prevention.",
