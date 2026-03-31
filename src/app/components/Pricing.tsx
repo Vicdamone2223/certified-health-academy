@@ -1,6 +1,6 @@
 const offerings = [
-  { name: "CPR & First Aid", price: "$65", renew: "Every 2 years", accred: "HSI accredited", href: "/courses/cpr-first-aid" },
-  { name: "Medication Administration", price: "$70", renew: "Every year", accred: "Home Health Plus accredited", href: "/courses/medication-administration" },
+  { name: "CPR & First Aid", price: "$80", renew: "Every 2 years", accred: "HSI accredited", href: "/courses/cpr-first-aid" },
+  { name: "Medication Administration", price: "$110", renew: "Every year", accred: "Home Health Plus accredited", href: "/courses/medication-administration" },
   { name: "Food Handler (Manager)", price: "$140", renew: "Every 5 years", accred: "ServSafe accredited", href: "/courses/food-handler-manager" }
 ];
 
