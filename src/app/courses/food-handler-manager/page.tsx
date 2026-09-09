@@ -3,26 +3,32 @@ import Image from "next/image";
 
 export const metadata = {
   title:
-    "Food Manager & Food Handler Certification in VA, MD & DC | Certified Health Academy",
+    "Certificación de Manipulación y Gerencia de Alimentos en VA, MD y DC | Certified Health Academy",
   description:
-    "Food Handler and Food Manager certification training for restaurants and food businesses in Virginia, Maryland and Washington, DC. ServSafe-aligned classes, Spanish assistance, group and on-site training available.",
+    "Capacitación de Manipulación y Gerencia de Alimentos para restaurantes y negocios de comida en Virginia, Maryland y Washington, DC. Clases alineadas con ServSafe, asistencia en español, grupos y capacitación en el lugar de trabajo.",
   alternates: {
     canonical:
-      "https://certifiedhealthacademy.com/courses/food-handler-manager",
+      "https://certifiedhealthacademy.com/es/courses/food-handler-manager",
+    languages: {
+      "en-US":
+        "https://certifiedhealthacademy.com/courses/food-handler-manager",
+      "es-US":
+        "https://certifiedhealthacademy.com/es/courses/food-handler-manager",
+    },
   },
 };
 
-export default function FoodHandlerManagerPage() {
+export default function FoodHandlerManagerSpanishPage() {
   const courseJsonLd = {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Food Handler & Food Manager Certification",
+    name: "Certificación de Manipulación y Gerencia de Alimentos",
     description:
-      "Food Handler and Food Manager training for restaurants, food trucks, caterers, childcare programs, healthcare food-service teams, and other food businesses throughout Virginia, Maryland, and Washington, DC.",
-    inLanguage: "en",
+      "Capacitación de Manipulación y Gerencia de Alimentos para restaurantes, food trucks, negocios de catering, programas de cuidado infantil, servicios de alimentos en el sector de salud y otros negocios de comida en Virginia, Maryland y Washington, DC.",
+    inLanguage: "es",
     courseMode: "InPerson",
     educationalCredentialAwarded:
-      "Food Handler / Food Manager Certificate",
+      "Certificado de Manipulación / Gerencia de Alimentos",
     provider: {
       "@type": "Organization",
       name: "Certified Health Academy",
@@ -31,7 +37,7 @@ export default function FoodHandlerManagerPage() {
     },
     offers: {
       "@type": "Offer",
-      url: "https://certifiedhealthacademy.com/courses/food-handler-manager",
+      url: "https://certifiedhealthacademy.com/es/courses/food-handler-manager",
       price: "140",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
@@ -45,15 +51,15 @@ export default function FoodHandlerManagerPage() {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Courses",
-        item: "https://certifiedhealthacademy.com/courses",
+        name: "Cursos",
+        item: "https://certifiedhealthacademy.com/es/courses",
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Food Handler & Food Manager Certification",
+        name: "Manipulación y Gerencia de Alimentos",
         item:
-          "https://certifiedhealthacademy.com/courses/food-handler-manager",
+          "https://certifiedhealthacademy.com/es/courses/food-handler-manager",
       },
     ],
   };
@@ -61,26 +67,27 @@ export default function FoodHandlerManagerPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
       <Link
-        href="/courses"
+        href="/es/courses"
         className="text-sm text-[var(--accent)] hover:underline"
       >
-        ← Back to Courses
+        ← Volver a Cursos
       </Link>
 
       <header className="mt-2">
         <h1 className="text-3xl font-extrabold">
-          Food Handler & Food Manager Certification in Virginia, Maryland & DC
+          Certificación de Manipulación y Gerencia de Alimentos en Virginia,
+          Maryland y Washington, DC
         </h1>
 
         <p className="mt-2 text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
-          <strong>$140</strong> · ServSafe-aligned training · Flexible scheduling
-          · Group and on-site options available
+          <strong>$140</strong> · Capacitación alineada con ServSafe · Horarios
+          flexibles · Opciones para grupos y capacitación en el lugar de trabajo
         </p>
 
         <div className="relative mt-4 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[color-mix(in_srgb,var(--brand)_10%,transparent)]">
           <Image
             src="/food2.jpg"
-            alt="Food safety training and temperature checks"
+            alt="Capacitación en seguridad alimentaria y control de temperatura"
             fill
             className="object-cover"
             sizes="(min-width:768px) 768px, 100vw"
@@ -91,214 +98,235 @@ export default function FoodHandlerManagerPage() {
 
       <section className="mt-6">
         <h2 className="text-xl font-semibold">
-          Food Safety Certification for Restaurants and Food Businesses
+          Capacitación en Seguridad Alimentaria para Restaurantes y Negocios de
+          Comida
         </h2>
 
         <p className="mt-2">
-          Certified Health Academy provides Food Handler and Food Manager
-          certification training for restaurants, food trucks, caterers, cafés,
-          childcare programs, healthcare food-service teams, and other food
-          businesses throughout Virginia, Maryland, and Washington, DC.
+          Certified Health Academy ofrece capacitación de Manipulación y
+          Gerencia de Alimentos para restaurantes, food trucks, negocios de
+          catering, cafés, programas de cuidado infantil, servicios de alimentos
+          en el sector de salud y otros negocios de comida en Virginia, Maryland
+          y Washington, DC.
         </p>
 
         <p className="mt-3">
-          Our training is designed to help managers and food-service
-          professionals understand safe food handling, sanitation, temperature
-          control, allergen safety, employee practices, and day-to-day food
-          safety procedures.
+          La capacitación está diseñada para ayudar a gerentes y trabajadores
+          del servicio de alimentos a comprender las prácticas de manipulación
+          segura de alimentos, higiene, control de temperatura, manejo de
+          alérgenos, prevención de contaminación y procedimientos diarios de
+          seguridad alimentaria.
         </p>
       </section>
 
       <section className="mt-6">
-        <h2 className="text-xl font-semibold">Who This Training Is For</h2>
+        <h2 className="text-xl font-semibold">
+          ¿Para Quién Es Esta Capacitación?
+        </h2>
 
         <ul className="mt-2 list-disc space-y-1 pl-6">
-          <li>Restaurant and café managers</li>
-          <li>Food truck owners and employees</li>
-          <li>Caterers and commercial kitchen staff</li>
-          <li>Childcare and school food-service teams</li>
-          <li>Healthcare food-service staff</li>
-          <li>Supervisors responsible for food safety and sanitation</li>
-        </ul>
-      </section>
-
-      <section className="mt-6">
-        <h2 className="text-xl font-semibold">What You’ll Learn</h2>
-
-        <ul className="mt-2 list-disc space-y-1 pl-6">
-          <li>HACCP principles and Active Managerial Control</li>
-          <li>Time and temperature control for safety (TCS) foods</li>
-          <li>Allergen management and preventing cross-contact</li>
-          <li>Personal hygiene, illness policies, and glove use</li>
-          <li>Receiving, labeling, storage, FIFO, and thawing procedures</li>
+          <li>Gerentes de restaurantes y cafés</li>
+          <li>Propietarios y empleados de food trucks</li>
+          <li>Personal de catering y cocinas comerciales</li>
+          <li>Personal de alimentos en escuelas y centros infantiles</li>
+          <li>Personal de servicios de alimentos en el sector de salud</li>
           <li>
-            Cooking temperatures, hot and cold holding, cooling, and reheating
+            Supervisores responsables de seguridad e higiene alimentaria
           </li>
-          <li>Cleaning, sanitizing, chemical safety, and warewashing</li>
-          <li>Facility sanitation, pest management, logs, and documentation</li>
+        </ul>
+      </section>
+
+      <section className="mt-6">
+        <h2 className="text-xl font-semibold">Lo Que Aprenderá</h2>
+
+        <ul className="mt-2 list-disc space-y-1 pl-6">
+          <li>Principios de HACCP y control gerencial activo</li>
+          <li>
+            Control de tiempo y temperatura para alimentos que requieren
+            seguridad especial (TCS)
+          </li>
+          <li>Manejo de alérgenos y prevención de contaminación cruzada</li>
+          <li>Higiene personal, políticas de enfermedad y uso de guantes</li>
+          <li>Recepción, etiquetado, almacenamiento, FIFO y descongelación</li>
+          <li>
+            Temperaturas de cocción, mantenimiento en caliente y frío,
+            enfriamiento y recalentamiento
+          </li>
+          <li>
+            Limpieza, desinfección, seguridad química y lavado de utensilios
+          </li>
+          <li>
+            Higiene de instalaciones, control de plagas, registros y
+            documentación
+          </li>
         </ul>
       </section>
 
       <section className="mt-6">
         <h2 className="text-xl font-semibold">
-          Group & On-Site Food Safety Training
+          Capacitación para Grupos y en el Lugar de Trabajo
         </h2>
 
         <p className="mt-2">
-          Certified Health Academy works with businesses and organizations that
-          need multiple employees trained. Group classes are available, and
-          on-site training may be offered at your restaurant, food-service
-          operation, or workplace depending on scheduling and location.
+          Certified Health Academy trabaja con negocios y organizaciones que
+          necesitan capacitar a varios empleados al mismo tiempo. Ofrecemos
+          clases para grupos y, dependiendo de la ubicación y el horario, la
+          capacitación puede realizarse en su restaurante, negocio o lugar de
+          trabajo.
         </p>
 
         <p className="mt-3">
-          This option is ideal for restaurant owners, food truck operators,
-          catering businesses, childcare programs, and other organizations that
-          need a convenient way to train several employees at once.
+          Esta opción es ideal para restaurantes, food trucks, compañías de
+          catering, programas de cuidado infantil y otros negocios que necesitan
+          capacitar a varios empleados de una manera conveniente.
         </p>
       </section>
 
       <section className="mt-6">
         <h2 className="text-xl font-semibold">
-          Spanish-Speaking Assistance Available
+          Asistencia en Español Disponible
         </h2>
 
         <p className="mt-2">
-          Training is primarily provided in English, but Spanish-speaking
-          assistance and translation are available for students who are more
-          comfortable communicating in Spanish.
+          La capacitación se ofrece principalmente en inglés, pero hay
+          asistencia y traducción al español disponibles para estudiantes que se
+          sientan más cómodos comunicándose en español.
         </p>
 
         <p className="mt-3">
-          If you or members of your staff need Spanish-language assistance,
-          contact us before class so we can help make the training process as
-          clear and comfortable as possible.
+          Si usted o miembros de su equipo necesitan ayuda en español,
+          comuníquese con Certified Health Academy antes de la clase para que
+          podamos ayudarle durante el proceso de capacitación.
         </p>
       </section>
 
       <section className="mt-6">
         <h2 className="text-xl font-semibold">
-          Serving Virginia, Maryland & Washington, DC
+          Clases en Virginia, Maryland y Washington, DC
         </h2>
 
         <p className="mt-2">
-          Certified Health Academy provides Food Handler and Food Manager
-          training throughout Virginia, Maryland, and Washington, DC. Class
-          locations vary, and flexible scheduling is available for individuals,
-          groups, and businesses.
+          Certified Health Academy ofrece capacitación de Manipulación y
+          Gerencia de Alimentos en Virginia, Maryland y Washington, DC. Las
+          ubicaciones de las clases varían y ofrecemos horarios flexibles para
+          individuos, grupos y negocios.
         </p>
 
         <p className="mt-3">
-          Weekend classes may also be available depending on scheduling.
+          También puede haber clases disponibles durante los fines de semana,
+          dependiendo del horario.
         </p>
       </section>
 
       <section className="mt-6 grid gap-4 sm:grid-cols-2">
         <div className="rounded-2xl border bg-white p-5">
-          <h3 className="font-semibold">Course Price</h3>
+          <h3 className="font-semibold">Precio del Curso</h3>
           <p className="mt-2 text-sm">
-            Food Handler (Manager) Training: <strong>$140</strong>
+            Capacitación de Manipulación y Gerencia de Alimentos:{" "}
+            <strong>$140</strong>
           </p>
         </div>
 
         <div className="rounded-2xl border bg-white p-5">
-          <h3 className="font-semibold">Certificate Availability</h3>
+          <h3 className="font-semibold">Disponibilidad del Certificado</h3>
           <p className="mt-2 text-sm">
-            Certificates are normally available within{" "}
-            <strong>24–48 hours</strong> after successful completion.
+            Los certificados normalmente están disponibles dentro de{" "}
+            <strong>24–48 horas</strong> después de completar exitosamente la
+            capacitación.
           </p>
         </div>
       </section>
 
       <section className="mt-6">
-        <h2 className="text-xl font-semibold">Requirements & What to Bring</h2>
+        <h2 className="text-xl font-semibold">
+          Requisitos y Qué Debe Traer
+        </h2>
 
         <ul className="mt-2 list-disc space-y-1 pl-6">
-          <li>Valid photo ID for check-in</li>
+          <li>Identificación con foto para registrarse</li>
           <li>
-            Any employer or local health department requirements relevant to
-            your role
+            Cualquier requisito de su empleador o departamento de salud local
           </li>
           <li>
-            Recent inspection notes or food-safety questions, if you would like
-            to discuss them during training
+            Preguntas sobre seguridad alimentaria o notas de inspección que
+            desee discutir
           </li>
         </ul>
       </section>
 
       <section className="mt-8">
-        <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold">Preguntas Frecuentes</h2>
 
         <div className="mt-4 space-y-5">
           <div>
             <h3 className="font-semibold">
-              How much does Food Handler or Food Manager training cost?
+              ¿Cuánto cuesta la capacitación de Manipulación o Gerencia de
+              Alimentos?
             </h3>
             <p className="mt-1">
-              The Food Handler (Manager) Training course is{" "}
-              <strong>$140</strong>.
+              El curso cuesta <strong>$140</strong> por estudiante.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              Do you offer group training for restaurants and businesses?
+              ¿Ofrecen capacitación para grupos de restaurantes o negocios?
             </h3>
             <p className="mt-1">
-              Yes. Certified Health Academy regularly works with groups and
-              businesses that need multiple employees trained.
+              Sí. Certified Health Academy trabaja con negocios y
+              organizaciones que necesitan capacitar a varios empleados.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              Can you provide training at our restaurant or workplace?
+              ¿Pueden dar la capacitación en nuestro restaurante o negocio?
             </h3>
             <p className="mt-1">
-              On-site training may be available depending on the size of the
-              group, scheduling, and location.
+              La capacitación en el lugar de trabajo puede estar disponible
+              dependiendo del tamaño del grupo, la ubicación y el horario.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              Is Spanish-speaking assistance available?
+              ¿Hay asistencia en español disponible?
             </h3>
             <p className="mt-1">
-              Yes. Classes are primarily taught in English, but
-              Spanish-speaking assistance and translation are available when
-              needed.
+              Sí. Las clases se ofrecen principalmente en inglés, pero hay
+              asistencia y traducción al español disponibles cuando sea
+              necesario.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              Do you offer weekend classes?
+              ¿Ofrecen clases los fines de semana?
             </h3>
             <p className="mt-1">
-              Yes. Weekend availability may be offered depending on the current
-              class schedule.
+              Sí. Puede haber disponibilidad durante los fines de semana,
+              dependiendo del horario actual.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              How soon will I receive my certificate?
+              ¿Cuándo recibiré mi certificado?
             </h3>
             <p className="mt-1">
-              Certificates are normally available within 24–48 hours after
-              successful completion.
+              Los certificados normalmente están disponibles dentro de 24–48
+              horas después de completar exitosamente la capacitación.
             </p>
           </div>
 
           <div>
             <h3 className="font-semibold">
-              Where are Food Handler and Food Manager classes offered?
+              ¿Dónde se ofrecen las clases?
             </h3>
             <p className="mt-1">
-              Class locations vary throughout Virginia, Maryland, and
-              Washington, DC. Contact Certified Health Academy for current
-              availability.
+              Las ubicaciones varían en Virginia, Maryland y Washington, DC.
+              Comuníquese con Certified Health Academy para conocer la
+              disponibilidad actual.
             </p>
           </div>
         </div>
@@ -306,18 +334,18 @@ export default function FoodHandlerManagerPage() {
 
       <section className="mt-8 rounded-2xl border p-5">
         <h2 className="text-xl font-semibold">
-          Schedule Food Handler or Food Manager Training
+          Programe su Capacitación de Manipulación o Gerencia de Alimentos
         </h2>
 
         <p className="mt-2">
-          Whether you are registering individually or need training for your
-          restaurant, food truck, catering company, or organization, Certified
-          Health Academy can help you find an upcoming class or arrange group
-          training.
+          Ya sea que se registre individualmente o necesite capacitación para
+          su restaurante, food truck, negocio de catering u organización,
+          Certified Health Academy puede ayudarle a encontrar una próxima clase
+          o coordinar capacitación para grupos.
         </p>
 
         <p className="mt-3">
-          Questions? Call{" "}
+          ¿Preguntas? Llame al{" "}
           <a
             href="tel:+15712885615"
             className="font-semibold text-[var(--accent)] hover:underline"
@@ -329,16 +357,16 @@ export default function FoodHandlerManagerPage() {
       </section>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Link href="/schedule" className="btn btn-primary">
-          Book This Class
+        <Link href="/es/schedule" className="btn btn-primary">
+          Reservar Esta Clase
         </Link>
 
-        <Link href="/contact" className="btn btn-outline">
-          Contact Us
+        <Link href="/es/contact" className="btn btn-outline">
+          Contáctenos
         </Link>
 
-        <Link href="/courses" className="btn btn-outline">
-          View All Courses
+        <Link href="/es/courses" className="btn btn-outline">
+          Ver Todos los Cursos
         </Link>
       </div>
 
