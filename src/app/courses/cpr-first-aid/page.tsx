@@ -8,6 +8,12 @@ export const metadata = {
     "Hands-on CPR, AED and First Aid certification training in Virginia, Maryland and Washington, DC. HSI-accredited classes, group and on-site training, weekend availability and Spanish-speaking assistance.",
   alternates: {
     canonical: "https://certifiedhealthacademy.com/courses/cpr-first-aid",
+    languages: {
+      "en-US":
+        "https://certifiedhealthacademy.com/courses/cpr-first-aid",
+      "es-US":
+        "https://certifiedhealthacademy.com/es/courses/cpr-first-aid",
+    },
   },
 };
 
