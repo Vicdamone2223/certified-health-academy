@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CourseCards from "./components/CourseCards";
+import HomepageDetails from "./components/HomepageDetails";
 
 export default function Home() {
   return (
@@ -24,23 +25,32 @@ export default function Home() {
             {/* Text */}
             <div className="md:order-1">
               <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight">
-                Train Today. <span className="text-[var(--accent)]">Be Ready</span> When It Counts.
+                Train Today.{" "}
+                <span className="text-[var(--accent)]">Be Ready</span> When It
+                Counts.
               </h1>
 
               <p className="mt-3 text-base sm:text-lg text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
-                Accredited CPR &amp; First Aid, Medication Administration, and Food Handler training
-                across DC, Virginia & Maryland. Reserve a spot with us today!
+                Accredited CPR &amp; First Aid, Medication Administration, and
+                Food Handler certification training throughout Virginia,
+                Maryland &amp; Washington, DC. Individual, group, and on-site
+                classes available.
               </p>
 
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                <Link href="/schedule" className="btn btn-primary">Book a Class</Link>
-                <Link href="/courses" className="btn btn-outline">See Courses</Link>
+                <Link href="/schedule" className="btn btn-primary">
+                  Book a Class
+                </Link>
+
+                <Link href="/courses" className="btn btn-outline">
+                  See Courses
+                </Link>
               </div>
 
               <ul className="mt-5 space-y-1.5 text-sm text-[color-mix(in_srgb,var(--brand)_70%,black_30%)]">
                 <li>• HSI · Home Health Plus · ServSafe</li>
-                <li>• Certificates provided</li>
-                <li>• DC &amp; Virginia & Maryland</li>
+                <li>• Group &amp; on-site training available</li>
+                <li>• Virginia · Maryland · Washington, DC</li>
               </ul>
             </div>
           </div>
@@ -49,6 +59,9 @@ export default function Home() {
 
       {/* Detailed course cards */}
       <CourseCards />
+
+      {/* Additional homepage content */}
+      <HomepageDetails />
     </>
   );
 }
